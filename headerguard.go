@@ -53,7 +53,7 @@ func (hg *HeaderGuard) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	headerValue := req.Header.Get(hg.header)
 
 	if headerValue == "" {
-		http.Error(rw, "Forbidden: missing header", http.StatusForbidden)
+		http.Error(rw, "Forbidden: missing required header '"+hg.header+"'", http.StatusForbidden)
 		return
 	}
 
@@ -66,5 +66,10 @@ func (hg *HeaderGuard) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 		}
 	}
 
-	http.Error(rw, "Forbidden", http.StatusForbidden)
+	allowedList := make([]string, 0, len(hg.allow))
+	for v := range hg.allow {
+		allowedList = append(allowedList, v)
+	}
+
+	http.Error(rw, "Forbidden: header '"+hg.header+"' has no allowed value (allowed value(s): "+strings.Join(allowedList, ", ")+")", http.StatusForbidden)
 }
