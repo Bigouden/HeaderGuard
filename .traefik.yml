@@ -2,7 +2,7 @@ displayName: Header Guard
 summary: Allow access based on HTTP header values
 type: middleware
 
-import: github.com/Bigouden/HeaderGuard
+import: github.com/bigouden/headerguard
 
 iconPath: ./img/icon.png
 bannerPath: ./img/banner.png
