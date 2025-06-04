@@ -9,7 +9,7 @@ import (
 
 // Config defines the plugin configuration.
 type Config struct {
-	Header string   `json:"header,omitempty"`
+	Header     string   `json:"header,omitempty"`
 	Allow      []string `json:"allow,omitempty"`
 	Separator  string   `json:"separator,omitempty"`
 }
@@ -17,7 +17,7 @@ type Config struct {
 // CreateConfig creates the default plugin configuration.
 func CreateConfig() *Config {
 	return &Config{
-		Header: "X-Auth-Request-Groups",
+		Header:     "X-Auth-Request-Groups",
 		Allow:      []string{},
 		Separator:  "|",
 	}
@@ -26,7 +26,7 @@ func CreateConfig() *Config {
 // HeaderGuard is a middleware that checks if a request's header matches allowed values.
 type HeaderGuard struct {
 	next       http.Handler
-	header string
+	header     string
 	allow      map[string]struct{}
 	separator  string
 	name       string
