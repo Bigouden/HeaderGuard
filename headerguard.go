@@ -68,7 +68,7 @@ func (hg *HeaderGuard) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 
 	allowedList := make([]string, 0, len(hg.allow))
 	for v := range hg.allow {
-		allowedList = append(allowedList, v)
+		allowedList = append(allowedList, "'"+v+"'")
 	}
 
 	http.Error(rw, "Forbidden: header '"+hg.header+"' has no allowed value (received: '"+headerValue+"', allowed: "+strings.Join(allowedList, ", ")+")", http.StatusForbidden)

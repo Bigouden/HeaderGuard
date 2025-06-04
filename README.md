@@ -22,7 +22,7 @@
 experimental:
   plugins:
     headerguard:
-      moduleName: github.com/bigouden/headerguard
+      moduleName: github.com/Bigouden/headerguard
       version: v0.0.1
 ```
 
