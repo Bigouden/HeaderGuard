@@ -1,0 +1,16 @@
+displayName: HeaderGuard
+summary: Allow access based on HTTP header values
+type: middleware
+
+import: github.com/Bigouden/HeaderGuard
+
+iconPath: ./img/icon.png
+bannerPath: ./img/banner.png
+
+testData:
+  Header:
+    header: "X-Auth-Request-Groups"
+    allow:
+      - "admin"
+      - "users"
+    separator: "|"
