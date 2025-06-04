@@ -1,3 +1,4 @@
+![Header Guard Banner](./img/banner.png)
 
 # Header Guard
 
