@@ -21,7 +21,7 @@
 ```yaml
 experimental:
   plugins:
-    HeaderGuard:
+    headerguard:
       moduleName: github.com/Bigouden/HeaderGuard
       version: v0.0.1
 ```
