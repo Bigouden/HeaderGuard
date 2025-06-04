@@ -41,7 +41,7 @@ func New(_ context.Context, next http.Handler, config *Config, name string) (htt
 
 	return &HeaderGuard{
 		next:       next,
-		header: config.Header,
+		header:     config.Header,
 		allow:      allowedSet,
 		separator:  config.Separator,
 		name:       name,
