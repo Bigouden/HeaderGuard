@@ -1,7 +1,7 @@
 
-# HeaderGuard
+# Header Guard
 
-**HeaderGuard** is a middleware plugin for [Traefik](https://traefik.io) that filters HTTP requests based on the value of a specified HTTP header.
+**Header Guard** is a middleware plugin for [Traefik](https://traefik.io) that filters HTTP requests based on the value of a specified HTTP header.
 
 ---
 
