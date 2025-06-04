@@ -1,4 +1,4 @@
-displayName: HeaderGuard
+displayName: Header Guard
 summary: Allow access based on HTTP header values
 type: middleware
 
