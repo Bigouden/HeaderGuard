@@ -1,0 +1,8 @@
+---
+include:
+  - project: "Bigouden/gitlab-ci-templates"
+    file: ".gitlab-ci-common.yml"
+
+stages:
+  - Quality
+  - Security
