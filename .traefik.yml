@@ -8,9 +8,8 @@ iconPath: ./img/icon.png
 bannerPath: ./img/banner.png
 
 testData:
-  Header:
-    header: "X-Auth-Request-Groups"
-    allow:
-      - "admin"
-      - "users"
-    separator: "|"
+  header: "X-Auth-Request-Groups"
+  allow:
+    - "admin"
+    - "users"
+  separator: "|"
